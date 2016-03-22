@@ -20,8 +20,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'Test.data';
-    var REMOTE_PACKAGE_BASE = 'Test.data';
+    var PACKAGE_NAME = 'brikboy.github.io.data';
+    var REMOTE_PACKAGE_BASE = 'brikboy.github.io.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -30,8 +30,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 8211217;
-      var PACKAGE_UUID = '76c523aa-2128-4f53-8753-6e4ec49194b1';
+      var REMOTE_PACKAGE_SIZE = 8218589;
+      var PACKAGE_UUID = '38de47a5-ad95-4064-906b-68ef397bf996';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -132,12 +132,12 @@ Module['FS_createPath']('/', 'Resources', true, true);
       },
     };
 
-      new DataRequest(0, 22848, 0, 0).open('GET', '/mainData');
-    new DataRequest(22848, 22869, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(22869, 4613233, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(4613233, 5815317, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(5815317, 7707333, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(7707333, 8211217, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 29320, 0, 0).open('GET', '/mainData');
+    new DataRequest(29320, 29341, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(29341, 4619801, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(4619801, 5822689, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(5822689, 7714705, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(7714705, 8218589, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -153,10 +153,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_Test.data');
+          Module['removeRunDependency']('datafile_brikboy.github.io.data');
 
     };
-    Module['addRunDependency']('datafile_Test.data');
+    Module['addRunDependency']('datafile_brikboy.github.io.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
